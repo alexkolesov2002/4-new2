@@ -45,10 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinPth.cs" />
+    <Compile Include="Кратчайший путь2\MinPth.cs" />
     <Compile Include="Джонсона\Jonson.cs" />
     <Compile Include="Кратчайший путь\Algorithm.cs" />
-    <Compile Include="Kommivoyajor.cs" />
+    <Compile Include="Коммивояжер\Kommivoyajor.cs" />
     <Compile Include="Кратчайший путь\MainKr.cs" />
     <Compile Include="Кратчайший путь\Node.cs" />
     <Compile Include="Program.cs" />

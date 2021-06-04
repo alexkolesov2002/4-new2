@@ -30,7 +30,7 @@ namespace _4_класса_new
                     maxind = fnlcn.IndexOf(st);
                 }
             }
-            using (StreamWriter sr = new StreamWriter("КороткаяДорога.txt"))
+            using (StreamWriter sr = new StreamWriter("Кратчайший путь.txt"))
             {
                 sr.WriteLine("Путь: ");
                 foreach (Sturla rb in fnlcn[maxind])

@@ -31,7 +31,7 @@ namespace _4_класса_new
                     maxind = i;
                 }
             }
-            using (StreamWriter sr = new StreamWriter("Кратчайший путь.txt"))
+            using (StreamWriter sr = new StreamWriter("Критический Путь.txt"))
             {
                 foreach (Rbt rb in fnlcn[maxind])
                 {

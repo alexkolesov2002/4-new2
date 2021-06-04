@@ -37,11 +37,11 @@ namespace _4_класса_new
                 }
                 else if (nom == 5)
                 {
-                    MinPth m = new MinPth("КратчайшийПуть.csv");
+                    MinPth m = new MinPth(@"Файл ввода для кратчайшего и минимального.csv");
                 }
                 else if (nom == 6)
                 {
-                    CrtPth Cp = new CrtPth("КратчайшийПуть.csv");
+                    CrtPth Cp = new CrtPth(@"Файл ввода для кратчайшего и минимального.csv");
                 }
                 else 
                 {
