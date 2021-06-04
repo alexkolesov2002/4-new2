@@ -46,7 +46,8 @@ namespace _4_класса_new
                 }
                 else if (nom == 7)
                 {
-                    CrtPth Cp = new CrtPth(@"Файл ввода для кратчайшего и минимального.csv");
+                    Severozapad sev = new Severozapad();
+                    sev.mainMinSZ();
                 }
                 else if (nom == 8)
                 {
