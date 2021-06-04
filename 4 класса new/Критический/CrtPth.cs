@@ -11,10 +11,11 @@ namespace _4_класса_new
         string s = "";
         public CrtPth(string path)
         {
+            //Создаем два листа по структуре
             List<Rbt> ret;
-            List<Rbt> ls = Flrd(path);
-            ret = ls.FindAll(x => x.point1 == ls[Minel(ls)].point1);
-            List<List<Rbt>> fnlcn = new List<List<Rbt>>();
+            List<Rbt> ls = Flrd(path);//Заполнили лист из файла
+            ret = ls.FindAll(x => x.point1 == ls[Minel(ls)].point1);//Записали точки начала
+            List<List<Rbt>> fnlcn = new List<List<Rbt>>();//Лист путей
             foreach (Rbt rb in ret)
             {
                 Mv(ls, rb);
@@ -30,7 +31,7 @@ namespace _4_класса_new
                     maxind = i;
                 }
             }
-            using (StreamWriter sr = new StreamWriter("Итог.txt"))
+            using (StreamWriter sr = new StreamWriter("Кратчайший путь.txt"))
             {
                 foreach (Rbt rb in fnlcn[maxind])
                 {
@@ -40,20 +41,23 @@ namespace _4_класса_new
             }
         }
         struct Rbt
-        {
+        {//Точки, длина
             public int point1;
             public int point2;
             public int length;
+            //Не используется
             public bool Equals(Rbt obj)
             {
                 if (this.point1 == obj.point1 && this.point2 == obj.point2 && this.length == obj.length) return true;
                 else return false;
             }
+            //Запись пути
             public override string ToString()
             {
                 return point1.ToString() + " - " + point2.ToString() + " " + length.ToString();
             }
         }
+        //Поиск начала
         int Minel(List<Rbt> ls)
         {
             int min = ls[0].point1, minind = 0;
@@ -67,6 +71,7 @@ namespace _4_класса_new
             }
             return minind;
         }
+        //Определение конечной точки
         int Maxel(List<Rbt> ls)
         {
             int min = ls[0].point2, maxind = 0;
@@ -123,7 +128,8 @@ namespace _4_класса_new
                 }
             }
             return ret;
-        }
+        } //Не используется
+        //Чтение
         List<Rbt> Flrd(string path)
         {
             List<Rbt> ret = new List<Rbt>();
@@ -138,6 +144,7 @@ namespace _4_класса_new
             }
             return ret;
         }
+        //Строка парсится в массив и массивы доставляются до начала ветвления
         List<Rbt> RtPrs(List<Rbt> ls, string s)
         {
             List<List<Rbt>> ret = new List<List<Rbt>>();
@@ -179,6 +186,7 @@ namespace _4_класса_new
             }
             return ret[maxind];
         }
+        //Подсчет длины пути
         int FnlMv(List<Rbt> ls)
         {
             int ret = 0;

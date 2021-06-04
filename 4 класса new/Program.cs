@@ -41,11 +41,7 @@ namespace _4_класса_new
                 }
                 else if (nom == 6)
                 {
-                    CrtPth Cp = new CrtPth("vvodKritic.csv");
-                }
-                else if (nom == 7)
-                {
-
+                    CrtPth Cp = new CrtPth("КратчайшийПуть.csv");
                 }
                 else 
                 {

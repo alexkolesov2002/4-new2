@@ -12,9 +12,9 @@ namespace _4_класса_new
         string s = "";
         public MinPth(string path)
         {
-            List<Sturla> ls = Flrd(path);
+            List<Sturla> ls = Flrd(path);//Лист точек
             List<List<Sturla>> fnlcn = new List<List<Sturla>>();
-            List<Sturla> ret = ls.FindAll(x => x.point1 == ls[Minel(ls)].point1);
+            List<Sturla> ret = ls.FindAll(x => x.point1 == ls[Minel(ls)].point1);//Точки начала пути
             foreach (Sturla rb in ret)
             {
                 Mv(ls, rb);
@@ -41,6 +41,7 @@ namespace _4_класса_new
                 sr.WriteLine(max);
             }
         }
+        //Точка начала
         int Minel(List<Sturla> ls)
         {
             int min = ls[0].point1, minind = 0;
@@ -54,12 +55,14 @@ namespace _4_класса_new
             }
             return minind;
         }
+        //
         struct Sturla
         {
             public int point1;
             public int point2;
             public int length;
         }
+        //Поиск конца
         int Maxel(List<Sturla> ls)
         {
             int min = ls[0].point2, maxind = 0;
@@ -73,6 +76,7 @@ namespace _4_класса_new
             }
             return maxind;
         }
+        //Рекурсивный метод для записи и поиска пути
         int Mv(List<Sturla> ls, Sturla minel)
         {
             int ret = 0;
@@ -96,6 +100,7 @@ namespace _4_класса_new
             }
             return ret;
         }
+        //Подстановка к ветвлению начала
         List<Sturla> RtPrs(List<Sturla> ls, string s)
         {
             List<List<Sturla>> ret = new List<List<Sturla>>();
@@ -137,6 +142,7 @@ namespace _4_класса_new
             }
             return ret[maxind];
         }
+        //Считаю длину
         int FnlMv(List<Sturla> ls)
         {
             int ret = 0;
@@ -146,6 +152,7 @@ namespace _4_класса_new
             }
             return ret;
         }
+        //Чтение
         List<Sturla> Flrd(string path)
         {
             List<Sturla> ret = new List<Sturla>();
