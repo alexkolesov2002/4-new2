@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3 на 3 потенциалы\Poten.cs" />
     <Compile Include="Кратчайший путь2\MinPth.cs" />
     <Compile Include="Джонсона\Jonson.cs" />
     <Compile Include="Кратчайший путь\Algorithm.cs" />

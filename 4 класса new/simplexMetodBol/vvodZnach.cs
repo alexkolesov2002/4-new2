@@ -108,8 +108,7 @@ namespace _4_класса_new
             }
             Console.WriteLine();
             Console.WriteLine("Решение:");
-            //Array.Reverse(result);
-            // double[] ms2 = { };
+           
 
             int ind = 1;
             for (int j = d - 2; j >= 0; j--)

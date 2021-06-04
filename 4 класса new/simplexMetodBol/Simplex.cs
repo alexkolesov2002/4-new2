@@ -40,7 +40,7 @@ namespace _4_класса_new
         //result - в этот массив будут записаны полученные значения X
         public double[,] Calculate(double[] result)
         {
-            int mainCol, mainRow; //ведущие столбец и строка
+            int mainCol, mainRow; //результирующие столбец и строка
             while (!IsItEnd())
             {
                 mainCol = findMainCol();
@@ -69,7 +69,7 @@ namespace _4_класса_new
             }
             return table;
         }
-        private bool IsItEnd()
+        private bool IsItEnd() //остановка программы, если  строка оценок меньше 0
         {
             bool flag = true;
             for (int j = 1; j < n; j++)
@@ -82,7 +82,7 @@ namespace _4_класса_new
             }
             return flag;
         }
-        private int findMainCol()
+        private int findMainCol()//Ищем разрешающую столбец
         {
             int mainCol = 1;
             for (int j = 2; j < n; j++)
@@ -90,7 +90,7 @@ namespace _4_класса_new
                     mainCol = j;
             return mainCol;
         }
-        private int findMainRow(int mainCol)
+        private int findMainRow(int mainCol)//Ищем разрещающую строку
         {
             int mainRow = 0;
             for (int i = 0; i < m - 1; i++)
