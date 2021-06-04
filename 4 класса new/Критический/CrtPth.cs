@@ -158,16 +158,13 @@ namespace _4_класса_new
                     }
                 }
             }
-            foreach (List<Rbt> l in ret)
+            for (int i = 0; i < ret.Count; i++)
             {
-                if (l[0].point1 != ls[Minel(ls)].point1)
+                if (i > 0)
                 {
-                    foreach (List<Rbt> l1 in ret)
+                    if (ret[i][0].point1 != ret[i][ret[i].Count - 1].point2)
                     {
-                        if (l1[0].point1 == ls[Minel(ls)].point1)
-                        {
-                            l.InsertRange(0, l1.FindAll(x => l1.IndexOf(x) <= l1.FindIndex(y => y.point2 == l[0].point1)));
-                        }
+                        ret[i].InsertRange(0, ret[i - 1].FindAll(x => ret[i - 1].IndexOf(x) <= ret[i - 1].FindIndex(y => y.point2 == ret[i][0].point1)));
                     }
                 }
             }
