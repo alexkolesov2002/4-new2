@@ -44,6 +44,15 @@ namespace _4_класса_new
                 {
                     CrtPth Cp = new CrtPth(@"Файл ввода для кратчайшего и минимального.csv");
                 }
+                else if (nom == 7)
+                {
+                    CrtPth Cp = new CrtPth(@"Файл ввода для кратчайшего и минимального.csv");
+                }
+                else if (nom == 8)
+                {
+                    Mimimal min = new Mimimal();
+                    min.mainMin();
+                }
                 else 
                 {
                     Console.WriteLine("Подумай еще раз!");
