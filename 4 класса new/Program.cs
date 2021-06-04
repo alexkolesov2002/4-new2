@@ -14,35 +14,34 @@ namespace _4_класса_new
             while (otv != 0)
             {
                 Console.WriteLine("Выберите номер задачи");
-                Console.WriteLine(" 1 - метод Джонсона; 2 - Симплекс-метод; 3 - задача Коммивояжёра; \n 4 - метод потенциалов с первоночальным распределением по методу минимального элемента; \n 5 - нахождение критического пути; 6 - нахождение кратчайшего пути; \n 7 - метод потенциалов с первоночальным распределением по методу сереро-западного угла.");
+                Console.WriteLine(" 1 - Симплекс-метод; 2 - метод Джонсона;  \n 3 - метод потенциалов;4 - задача Коммивояжёра; \n  5 - нахождение кратчайшего пути;6 - нахождение критического пути.");
                 int nom = Convert.ToInt32(Console.ReadLine());
                 if (nom == 1)
-                {
-                    Jonson d = new Jonson();
-                    d.vvod();
-                }
-                else if (nom == 2)
                 {
                     vvodZnach vz = new vvodZnach();
                     vz.simplexBol();
                 }
+                else if (nom == 2)
+                {
+                    Jonson d = new Jonson();
+                    d.vvod();
+                }
                 else if (nom == 3)
+                {
+                   
+                }
+                else if (nom == 4)
                 {
                     Kommivoyajor k = new Kommivoyajor();
                     k.Jora();
                 }
-                else if (nom == 4)
-                {
-
-                }
                 else if (nom == 5)
                 {
-                    CrtPth Cp = new CrtPth("vvodKritic.csv");
+                    MinPth m = new MinPth("КратчайшийПуть.csv");
                 }
                 else if (nom == 6)
                 {
-                    MainKr kr = new MainKr();
-                    kr.MainKrr();
+                    CrtPth Cp = new CrtPth("vvodKritic.csv");
                 }
                 else if (nom == 7)
                 {
