@@ -48,10 +48,7 @@
     <Compile Include="3 на 3 потенциалы\Poten.cs" />
     <Compile Include="Кратчайший путь2\MinPth.cs" />
     <Compile Include="Джонсона\Jonson.cs" />
-    <Compile Include="Кратчайший путь\Algorithm.cs" />
     <Compile Include="Коммивояжер\Kommivoyajor.cs" />
-    <Compile Include="Кратчайший путь\MainKr.cs" />
-    <Compile Include="Кратчайший путь\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -61,7 +58,6 @@
     </Compile>
     <Compile Include="simplexMetodBol\Simplex.cs" />
     <Compile Include="simplexMetodBol\vvodZnach.cs" />
-    <Compile Include="Кратчайший путь\TableParser.cs" />
     <Compile Include="Критический\CrtPth.cs" />
   </ItemGroup>
   <ItemGroup>
